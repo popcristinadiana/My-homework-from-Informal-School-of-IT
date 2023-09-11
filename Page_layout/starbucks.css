@@ -1,0 +1,300 @@
+:root {
+    --h1-size: 36px;
+    --h2-size: 26px;
+    --h4-size: 13px;
+    --p-size: 18px;
+
+/* SPACING */
+--spacing-sm: 8px;
+--spacing-md: 16px;
+--spacing-lg: 32px;
+--spacing-xl: 64px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+h3 {
+    font-size: var(--h3-size);
+}
+
+h4 {
+    font-size: var(--h4-size);
+}
+
+p {
+    font-size: var(--p-size);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.container { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "homepage homepage homepage homepage"
+      "features features features features"
+      "testimonials testimonials testimonials testimonials"
+      "image-gallery image-gallery image-gallery image-gallery"
+      "footer footer footer footer";
+  }
+
+  @media only screen and (max-width:640px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+        "homepage"
+        "features"
+        "testimonials"
+        "image-gallery"
+        "footer";
+    }
+  }
+
+  /* I tried this option too to make it work .container { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(13, auto);
+    grid-template-areas:
+      "homepage homepage homepage homepage"
+      "homepage homepage homepage homepage"
+      "homepage homepage homepage homepage"
+      "features features features features"
+      "features features features features"
+      "features features features features"
+      "features features features features"
+      "features features features features"
+      "features features features features"
+      "testimonials testimonials testimonials testimonials"
+      "testimonials testimonials testimonials testimonials"
+      "image-gallery image-gallery image-gallery image-gallery"
+      "footer footer footer footer";
+  }
+
+  @media (max-width: 640px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(16, auto); 
+        grid-template-areas:
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "homepage"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "features"
+          "testimonials"
+          "testimonials"
+          "testimonials"
+          "testimonials"
+          "image-gallery"
+          "image-gallery"
+          "image-gallery"
+          "image-gallery"
+          "footer";
+    }
+  } */
+
+  .homepage { 
+    grid-area: homepage; 
+}
+  
+  .features-container { 
+    grid-area: features; 
+}
+  
+  .testimonials { 
+    grid-area: testimonials;
+ }
+  
+  .image-gallery { 
+    grid-area: image-gallery;
+ }
+  
+footer { 
+    grid-area: footer; 
+}
+  
+.homepage {
+    display: flex;
+    flex-direction: column;
+    background-color: #afead1;
+    padding-bottom: var(--spacing-xl);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-sm);
+}
+
+#logo {
+    height: 50px;
+    margin-left: var(--spacing-md);
+}
+
+.navbar a {
+    margin-right: var(--spacing-md);
+}
+
+.navbar .sign-in {
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.hero h1 {
+    color: black;
+    position: absolute;
+    transform: translateY(-400px);
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    }
+
+.features-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.features-container .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.text-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.text-container p {
+    margin: var(--spacing-lg);
+}
+
+.text-container a:hover {
+    color:#fb5704;
+}
+
+.testimonials {
+    padding: 250px 0;
+}
+
+.testimonials-container {
+    display: flex;
+    column-gap: 30px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+}
+
+.column img {
+    height: 80px;
+    border-radius: 50%;
+}
+
+.column p {
+    text-align: center;
+}
+
+.column footer {
+    font-weight: bold;
+}
+
+.image-gallery {
+    display: flex;
+}
+
+.image-gallery img {
+    width: 25%;
+    padding-bottom: var(--spacing-xl);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+    background-color: #afead1;
+    padding: var(--spacing-xl) 0;
+}
+
+.footer-container .menu {
+    list-style: none;
+    display: flex;
+}
+
+.footer-container .menu a {
+    margin-right: var(--spacing-lg) ;
+    font-size: 15px;
+}
+
+.socials img {
+    height: 25px;
+    margin-right: var(--spacing-md);
+}
+
+.footer-container h4 {
+    font-size: var(--h4-size);
+}
