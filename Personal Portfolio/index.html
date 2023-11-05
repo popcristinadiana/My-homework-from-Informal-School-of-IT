@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header nav-open">
+    <a href="#" class="logo">Portfolio</a>
+    <ul class="menu">
+      <li><a href="#homepage">Home</a></li>
+      <li><a href="#about-me" onclick="triggerAnimation()">About</a></li>
+      <li><a href="#skills" onclick="triggerAnimation2()">Skills</a></li>
+      <li><a href="#my-projects" onclick="triggerAnimation3()">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="theme-toggle">
+        <a href="javascript:void(0);" onclick="toggleTheme()">
+          <i class='bx bxs-moon'></i>
+          <i class='bx bxs-sun' style="display:none;"></i>
+        </a>
+      </li>
+    </ul>
+    <button class="btn-mobile-nav">
+      <i class='bx bx-menu'></i>
+      <i class='bx bx-x'></i>
+    </button>
+  </header>
+
+  <section class="homepage" id="homepage">
+    <div class="home-bio">
+      <h2>Hello, my name is</h2>
+      <h1>Cristina-Diana Pop</h1>
+      <h3>and I'm a <span class="profession-highlight">Front-End Developer</span></h3>
+      <div class="networking-links">
+        <a href="https://www.linkedin.com/in/cristina-diana-pop/" target="_blank" class="network"><i
+            class='bx bxl-linkedin-square'></i></a>
+        <a href="https://github.com/popcristinadiana/Homework" target="_blank" class="network"><i
+            class='bx bxl-github'></i></a>
+        <a href="assets/Cristina_Diana_Pop_CV.pdf" target="_blank" download="Cristina_Diana_Pop_CV" id="resume">DOWNLOAD
+          CV</a>
+      </div>
+    </div>
+    <div class="profile-picture">
+      <img src="assets/profile-picture.png" alt="profile-picture" />
+    </div>
+  </section>
+
+  <section class="about-me" id="about-me">
+    <div class="about-me-info">
+      <h2>About Me</h2>
+      <p>
+        I'm a dedicated and passionate individual with a strong interest in
+        programming.Currently, I'm enrolled in a Front-End Web Development
+        course where I'm gaining skills in HTML, CSS, JavaScript, TypeScript
+        and Angular. One of my key strengths is my commitement to staying
+        updated with the latest technologies. My goal is on securing a
+        Front-End Developer role. I'm enthusiastic about learning and growing
+        in the field of web development.
+      </p>
+    </div>
+    <div class="emoji-picture">
+      <img src="assets/emoji-picture.png" alt="emoji-picture" class="emoji" />
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <div class="skills-items">
+      <div class="skills-heading">
+        <h2>My <span class="highlighted-text">Skills</span></h2>
+      </div>
+      <div class="skills-card-container">
+        <div class="skills-card">
+          <i class="bx bxl-html5"></i>
+          <p>HTML</p>
+        </div>
+        <div class="skills-card">
+          <i class="bx bxl-css3"></i>
+          <p>CSS</p>
+        </div>
+        <div class="skills-card" id="responsive-skill">
+          <i class="bx bx-devices"></i>
+          <p>
+            Responsive Web
+            Design
+          </p>
+        </div>
+        <div class="skills-card">
+          <i class="bx bxl-javascript"></i>
+          <p>JavaScript</p>
+        </div>
+        <div class="skills-card">
+          <i class="bx bxl-typescript"></i>
+          <p>TypeScript</p>
+        </div>
+        <div class="skills-card">
+          <i class="bx bxl-angular"></i>
+          <p>Angular</p>
+        </div>
+        <div class="skills-card">
+          <i class="bx bxl-github"></i>
+          <p>Git</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="courses">
+      <div class="courses-heading">
+        <h2>Courses</h2>
+      </div>
+      <div class="course-container">
+        <div class="course-card">
+          <h3>The Informal School of IT</h3>
+          <h4> Front-End Web Development Course 80h</h4>
+          <p>07.2023-10.2023</p>
+          <h5>TECH STACK</h5>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Angular</li>
+            <li>Git</li>
+          </ul>
+        </div>
+
+        <div class="course-card">
+          <h3>Udemy</h3>
+          <h4> The HTML & CSS Bootcamp 2023 Course 37h</h4>
+          <p>07.2023-09.2023</p>
+          <h5>TECH STACK</h5>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Responsive Web Design</li>
+          </ul>
+        </div>
+
+        <div class="course-card">
+          <h3>Udemy</h3>
+          <h4>The Complete JavaScript 2023 Course 68h</h4>
+          <p>in progress</p>
+          <h5>TECH STACK</h5>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+  </section>
+
+  <section class="my-projects" id="my-projects">
+    <div class="my-projects-heading">
+      <h2>My <span class="highlighted-text">Projects</span></h2>
+    </div>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="assets/netflix-project.png" alt="netflix-project" />
+        <h3>Netflix Clone Website</h3>
+        <p>This is one of my first projects. It was crafted using primarily HTML and CSS, serving as a test of my skills
+          in these technologies. The main challenge was to recreate the appereance and layout of the original Netflix
+          website. </p>
+        <div class="project-links">
+          <a href="">Github</a>
+          <a href="">Netlify</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/weather-app.png" alt="weather-app" />
+        <h3>Weather App</h3>
+        <p>The Weather App is a web-based application created using HTML, CSS, JavaScript, and external APIs. The
+          primary objective of this project was to gain practical experience in working with API requests, specifically
+          fetching and displaying weather data.</p>
+        <div class="project-links">
+          <a href="">Github</a>
+          <a href="">Netlify</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/e-commerce.png" alt="e-commerce-app" />
+        <h3>E-commerce Angular App</h3>
+        <p>The E-commerce Angular App is a modern web application created with the Angular framework. It offers an
+          engaging online shopping experience. This project demonstrates how to build a complete and user-friendly
+          e-commerce platform using Angular.</p>
+        <div class="project-links">
+          <a href="">Github</a>
+          <a href="">Netlify</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-details">
+          <i class='bx bxs-map'></i>
+          <p>Cluj, Romania</p>
+        </div>
+        <div class="contact-details">
+          <i class='bx bxs-phone'></i>
+          <p>+40 749 484 684</p>
+        </div>
+        <div class="contact-details">
+          <i class='bx bxs-envelope'></i>
+          <p>pop_crisstina@yahoo.com</p>
+        </div>
+      </div>
+      <div class="form-container">
+        <h3>Send me a message</h3>
+        <form action="">
+          <p>
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" required />
+          </p>
+          <p>
+            <label for="company">Company Name</label>
+            <input type="text" id="company" required />
+          </p>
+          <p>
+            <label for="phone">Phone number</label>
+            <input type="text" id="phone" required />
+          </p>
+          <p>
+            <label for="email">Email address</label>
+            <input type="email" id="email" required />
+          </p>
+          <p class="larger-width">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5"></textarea>
+          </p>
+          <p class="larger-width">
+            <button type="submit">SUBMIT</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-info">
+      <div class="links-container">
+        <h3>Navigation links</h3>
+        <a href="#homepage">Home</a>
+        <a href="#about-me">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#my-projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="links-container">
+        <h3>Coding Accounts</h3>
+        <a href="https://github.com/popcristinadiana/Homework" target="_blank">Github</a>
+        <a href="">Netlify</a>
+      </div>
+
+      <div class="links-container">
+        <h3>Contact Me</h3>
+        <a href="mailto:pop_crisstina@yahoo.com">Email</a>
+        <a href="tel:+40749484684">Phone</a>
+        <a href="https://www.linkedin.com/in/cristina-diana-pop/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <p>&copy; 2023 Cristina-Diana Pop. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
